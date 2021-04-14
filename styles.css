@@ -1,0 +1,56 @@
+#upper{
+    text-align: right;
+    background-color: aqua;
+}
+
+#upper button{
+    margin: 20px;
+
+}
+
+body{
+    text-align: center;
+}
+
+#main{
+    background-color: transparent;
+}
+
+#choose-image{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+#choose-image *{
+    margin: 10px;
+}
+
+textarea{
+    font-size: 20px;
+    resize: none;
+}
+
+.div{
+    border: 2px solid;
+    margin: 10px;
+    border-color: black;
+}
+.div *{
+   
+    margin: 10px;
+}
+
+#img-and-content{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.blog-div{
+    margin: 20px;
+    border: 2px solid;
+    border-color: black;
+}
