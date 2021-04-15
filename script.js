@@ -15,13 +15,13 @@ let database = firebase.database()
 
 
 
-database.ref().child("num").on('value' , (snapshot)=>{
-    while(main.firstChild){
+database.ref().child("num").on('value', (snapshot) => {
+    while (main.firstChild) {
         main.removeChild(main.firstChild)
     }
     console.log(snapshot.val())
     let num = snapshot.val()
-    for(let i=num;i>0;i--){
+    for (let i = num; i > 0; i--) {
         let div = document.createElement('div')
         main.appendChild(div)
         div.classList.add("blog-div")
@@ -33,18 +33,18 @@ database.ref().child("num").on('value' , (snapshot)=>{
         image.style.width = "200px"
         div.appendChild(image)
         div.appendChild(blog_content)
-        database.ref().child(i).child("image_url").on('value' , (image_url)=>{
+        database.ref().child(i).child("image_url").on('value', (image_url) => {
             console.log(image_url.val())
             image.src = image_url.val()
-            database.ref().child(i).child("blog").on('value' , (blog)=>{
+            database.ref().child(i).child("blog").on('value', (blog) => {
                 console.log(blog.val())
                 blog_content.innerHTML = blog.val()
-                database.ref().child(i).child("title").on('value' , (title)=>{
+                database.ref().child(i).child("title").on('value', (title) => {
                     blog_title.innerHTML = title.val()
                 })
             })
         })
-    }   
+    }
 })
 
 

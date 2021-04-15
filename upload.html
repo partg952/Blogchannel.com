@@ -1,12 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Orelega+One&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Upload Your Blog</title>
 </head>
+
 <body>
     <div id="choose-image" class="div">
         <p>Choose The Face For Your Blog</p>
@@ -17,7 +21,7 @@
 
     <div id="title" class="div">
         <p>Write The Title Of Your Blog</p>
-        <input type="text" id="blog-title">
+        <input type="text" id="blog-title" placeholder="Enter Your Blog Title">
     </div>
 
     <div id="blog" class="div">
@@ -33,8 +37,8 @@
             <img src="" alt="" id="final-image">
             <p id="content"></p>
         </div>
-       
-        <button id="upload">Post</button>
+
+        <button id="upload-button">Post</button>
     </div>
 
 </body>
@@ -43,4 +47,5 @@
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-storage.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
 <script src="upload.js"></script>
+
 </html>
